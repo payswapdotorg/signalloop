@@ -732,6 +732,18 @@ modules:
     layers:
       ui: .
     owner: conversation
+  # marketing：由 architecture:adopt 登记
+  - id: marketing
+    roots:
+      - packages/marketing/src
+    managed: true
+    requires: []
+    publicEntrypoints:
+      - packages/marketing/src/index.ts
+      - packages/marketing/src/contract.ts
+    layers:
+      adapters: .
+    owner: marketing
 
 global:
   # 临时时间戳（2026-09-10）：unmanaged-new-file 只约束此日期之后首次入库的文件。
